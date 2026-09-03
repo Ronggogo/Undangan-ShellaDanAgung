@@ -677,6 +677,7 @@
             clip-path: polygon(0 0, 100% 0, 100% 60%, 95% 100%, 88% 70%, 80% 95%, 72% 55%, 64% 90%, 56% 60%, 48% 85%, 40% 55%, 32% 80%, 24% 50%, 16% 75%, 8% 45%, 0 70%);
             position: relative;
             z-index: 2;
+            margin-top: -8px;
         }
 
         .paper-tear-bottom {
@@ -685,10 +686,11 @@
             clip-path: polygon(0 100%, 100% 100%, 100% 40%, 95% 0%, 88% 30%, 80% 5%, 72% 45%, 64% 10%, 56% 40%, 48% 15%, 40% 45%, 32% 20%, 24% 50%, 16% 25%, 8% 55%, 0 30%);
             position: relative;
             z-index: 2;
+            margin-bottom: -8px;
         }
 
         .quote-inner {
-            background: var(--maroon-deep);
+            background: rgba(0, 0, 0, 0.0);
             padding: 3rem 2rem;
             text-align: center;
             position: relative;
@@ -1629,6 +1631,28 @@
             border: 1px solid rgba(201, 164, 92, 0.3);
         }
 
+        .bank-logo-wrapper {
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .bank-logo-img {
+            max-height: 38px;
+            max-width: 140px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .bank-logo-img.seabank {
+            max-height: 42px;
+            max-width: 42px;
+        }
+
         .bank-logo {
             font-family: var(--font-serif);
             font-size: 1.1rem;
@@ -1639,28 +1663,11 @@
         }
 
         .bank-logo.mandiri {
-            color: #003087;
+            color: #003D79;
         }
 
-        .bank-logo.dana {
-            color: #1A8AF8;
-        }
-
-        .bank-logo-emoji {
-            font-size: 2.2rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 0.5rem;
-            color: var(--maroon-main);
-        }
-
-        .bank-logo-emoji.mandiri-icon {
-            color: #003087;
-        }
-
-        .bank-logo-emoji.dana-icon {
-            color: #1A8AF8;
+        .bank-logo.seabank {
+            color: #EA5F00;
         }
 
         .bank-account-label {
@@ -2010,7 +2017,7 @@
                     class="bi bi-stars"></i></span>
 
             <div class="gate-photo">
-                <img src="images/gate.jpg" alt="Foto Shella & Agung" />
+                <img src="images/gate.jpeg" alt="Foto Shella & Agung" />
             </div>
 
             <div class="gate-label">Undangan Pernikahan</div>
@@ -2046,7 +2053,7 @@
 
             <div class="hero-arch-wrap" data-reveal="scale">
                 <div class="hero-arch-frame">
-                    <img src="images/hero.jpg" alt="Foto prewedding Shella & Agung" />
+                    <img src="images/hero.JPEG" alt="Foto prewedding Shella & Agung" />
                 </div>
                 <div class="hero-monogram">
                     <img src="icon/logo.svg" alt="Monogram Logo Shella & Agung" class="monogram-logo" />
@@ -2068,7 +2075,7 @@
                     <div class="hero-date-divider"></div>
                     <div class="hero-date-number">
                         10
-                        <small>Oktober 2026</small>
+                        <small>Oktober</small>
                     </div>
                     <div class="hero-date-divider"></div>
                     <div class="hero-date-year">
@@ -2093,8 +2100,8 @@
                 <i class="bi bi-flower1"></i>
             </div>
             <p class="verse-arabic" data-reveal>
-                وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ
-                بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ
+                بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً
             </p>
             <p class="verse-translation" data-reveal>
                 "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu
@@ -2449,27 +2456,31 @@
             <div class="bank-cards-grid">
                 <!-- Mandiri -->
                 <div class="bank-card" data-reveal="left">
-                    <span class="bank-logo-emoji mandiri-icon" aria-hidden="true"><i class="bi bi-bank2"></i></span>
+                    <div class="bank-logo-wrapper">
+                        <img src="icon/bank_mandiri.svg" alt="Bank Mandiri" class="bank-logo-img mandiri" />
+                    </div>
                     <p class="bank-logo mandiri">Bank Mandiri</p>
                     <p class="bank-account-label">Nomor Rekening</p>
                     <p class="bank-account-number" id="mandiriNum">1080025339509</p>
-                    <p class="bank-account-name">Shella Syifa Arindatama</p>
+                    <p class="bank-account-name">Agung Kusuma</p>
                     <button class="btn-copy" id="btnCopyMandiri" aria-label="Salin nomor rekening Bank Mandiri"
                         data-account="1080025339509">
                         <i class="bi bi-clipboard-check"></i> Salin Nomor Rekening
                     </button>
                 </div>
 
-                <!-- Dana -->
+                <!-- SeaBank -->
                 <div class="bank-card" data-reveal="right">
-                    <span class="bank-logo-emoji dana-icon" aria-hidden="true"><i class="bi bi-wallet2"></i></span>
-                    <p class="bank-logo dana">DANA</p>
-                    <p class="bank-account-label">Nomor Akun</p>
-                    <p class="bank-account-number" id="danaNum">0812-XXXX-XXXX</p>
+                    <div class="bank-logo-wrapper">
+                        <img src="icon/bank_seabank.svg" alt="SeaBank" class="bank-logo-img seabank" />
+                    </div>
+                    <p class="bank-logo seabank">SeaBank</p>
+                    <p class="bank-account-label">Nomor Rekening</p>
+                    <p class="bank-account-number" id="seabankNum">0812-XXXX-XXXX</p>
                     <p class="bank-account-name">Shella Syifa Arindatama</p>
-                    <button class="btn-copy" id="btnCopyDana" aria-label="Salin nomor akun DANA"
+                    <button class="btn-copy" id="btnCopySeabank" aria-label="Salin nomor rekening SeaBank"
                         data-account="0812-XXXX-XXXX">
-                        <i class="bi bi-clipboard-check"></i> Salin Nomor
+                        <i class="bi bi-clipboard-check"></i> Salin Nomor Rekening
                     </button>
                 </div>
             </div>
@@ -2503,6 +2514,11 @@
                     data-reveal>
                     10 · 10 · 2026
                 </p>
+                <br>
+                <p style="margin-top:1rem;  font-size:0.72rem; letter-spacing:0.2em; color:var(--maroon-soft); opacity:0.6;"
+                    data-reveal>
+                    Made by Renggo
+                </p>
             </div>
         </section>
 
@@ -2519,7 +2535,7 @@
     <div id="toast" role="status" aria-live="polite"></div>
 
     <!-- Audio Element -->
-    <audio id="weddingAudio" loop preload="none">
+    <audio id="weddingAudio" loop preload="auto">
         <source src="music/wedding-song.mp3" type="audio/mpeg" />
     </audio>
 
@@ -2603,6 +2619,15 @@
             const audioCtrl = document.getElementById('audioControl');
 
             btnOpen.addEventListener('click', function openInvitation() {
+                // Play audio immediately inside the click event handler (preserves iOS Safari user gesture context)
+                audio.volume = 0.35;
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function () {
+                        /* Autoplay policy fallback */
+                    });
+                }
+
                 gate.classList.add('closing');
                 gate.addEventListener('animationend', function () {
                     gate.style.display = 'none';
@@ -2612,47 +2637,74 @@
                     petals.classList.add('active');
                     audioCtrl.classList.add('visible');
 
-                    // Start audio
-                    audio.volume = 0.35;
-                    audio.play().catch(() => { /* blocked by browser policy */ });
-
                     // Init scroll observer
                     initScrollReveal();
                 }, { once: true });
             });
         })();
 
-        /* ---- AUDIO CONTROL ---- */
+        /* ---- AUDIO CONTROL & BACKGROUND/TAB VISIBILITY ---- */
         (function initAudio() {
             const audio = document.getElementById('weddingAudio');
             const btn = document.getElementById('btnAudio');
-            let playing = false;
+            let wasPlayingBeforeHide = false;
 
-            btn.addEventListener('click', function () {
-                if (playing) {
-                    audio.pause();
-                    btn.innerHTML = '<i class="bi bi-music-note-beamed"></i>';
-                    btn.classList.remove('playing');
-                    btn.setAttribute('aria-label', 'Putar musik');
-                    playing = false;
-                } else {
-                    audio.play().catch(() => { });
+            function updateBtnState(isPlaying) {
+                if (isPlaying) {
                     btn.innerHTML = '<i class="bi bi-pause-fill"></i>';
                     btn.classList.add('playing');
                     btn.setAttribute('aria-label', 'Jeda musik');
-                    playing = true;
+                } else {
+                    btn.innerHTML = '<i class="bi bi-music-note-beamed"></i>';
+                    btn.classList.remove('playing');
+                    btn.setAttribute('aria-label', 'Putar musik');
+                }
+            }
+
+            btn.addEventListener('click', function () {
+                if (!audio.paused) {
+                    audio.pause();
+                } else {
+                    audio.play().catch(function () { });
                 }
             });
 
-            audio.addEventListener('play', () => {
-                playing = true;
-                btn.innerHTML = '<i class="bi bi-pause-fill"></i>';
-                btn.classList.add('playing');
+            audio.addEventListener('play', function () {
+                updateBtnState(true);
             });
-            audio.addEventListener('pause', () => {
-                playing = false;
-                btn.innerHTML = '<i class="bi bi-music-note-beamed"></i>';
-                btn.classList.remove('playing');
+
+            audio.addEventListener('pause', function () {
+                updateBtnState(false);
+            });
+
+            // Pause when switching tabs or minimizing / pressing home button
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    if (!audio.paused) {
+                        wasPlayingBeforeHide = true;
+                        audio.pause();
+                    }
+                } else {
+                    if (wasPlayingBeforeHide) {
+                        audio.play().catch(function () { });
+                        wasPlayingBeforeHide = false;
+                    }
+                }
+            });
+
+            // Fallback for mobile browser pagehide / pageshow
+            window.addEventListener('pagehide', function () {
+                if (!audio.paused) {
+                    wasPlayingBeforeHide = true;
+                    audio.pause();
+                }
+            });
+
+            window.addEventListener('pageshow', function () {
+                if (wasPlayingBeforeHide && !document.hidden) {
+                    audio.play().catch(function () { });
+                    wasPlayingBeforeHide = false;
+                }
             });
         })();
 
