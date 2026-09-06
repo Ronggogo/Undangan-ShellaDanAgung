@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" prefix="og: https://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,12 +7,35 @@
     <title>Undangan Pernikahan Shella & Agung — 10 Oktober 2026</title>
     <meta name="description"
         content="Dengan penuh kebahagiaan kami mengundang Anda untuk menyaksikan dan mendoakan pernikahan Shella Syifa Arindatama & Agung Kusuma pada 10 Oktober 2026 di Gedung UNRI Gobah, Pekanbaru." />
-    <!-- Open Graph -->
+
+    <!-- Canonical URL (Penting agar link dengan parameter seperti ?to=... tetap dikenali sebagai URL utama dan menggunakan cache Open Graph yang sama) -->
+    <link rel="canonical" href="https://undangan-shella-dan-agung.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="icon/logo.svg" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://undangan-shella-dan-agung.vercel.app/" />
+    <meta property="og:site_name" content="Undangan Pernikahan Shella & Agung" />
     <meta property="og:title" content="Undangan Pernikahan Shella & Agung" />
     <meta property="og:description" content="Sabtu, 10 Oktober 2026 · Gedung UNRI Gobah, Pekanbaru" />
-    <meta property="og:image" content="https://i.ibb.co/j9vKmv09/hero.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://undangan-shella-dan-agung.vercel.app" />
+    <meta property="og:image" content="https://undangan-shella-dan-agung.vercel.app/images/hero.jpg" />
+    <meta property="og:image:secure_url" content="https://undangan-shella-dan-agung.vercel.app/images/hero.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="853" />
+    <meta property="og:image:height" content="1280" />
+    <meta property="og:image:alt" content="Undangan Pernikahan Shella & Agung" />
+
+    <!-- Schema.org Microdata (Fallback untuk WhatsApp Android & Google scraper) -->
+    <meta itemprop="name" content="Undangan Pernikahan Shella & Agung" />
+    <meta itemprop="description" content="Sabtu, 10 Oktober 2026 · Gedung UNRI Gobah, Pekanbaru" />
+    <meta itemprop="image" content="https://undangan-shella-dan-agung.vercel.app/images/hero.jpg" />
+
+    <!-- Twitter / Telegram / Discord -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://undangan-shella-dan-agung.vercel.app/" />
+    <meta name="twitter:title" content="Undangan Pernikahan Shella & Agung" />
+    <meta name="twitter:description" content="Sabtu, 10 Oktober 2026 · Gedung UNRI Gobah, Pekanbaru" />
+    <meta name="twitter:image" content="https://undangan-shella-dan-agung.vercel.app/images/hero.jpg" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
